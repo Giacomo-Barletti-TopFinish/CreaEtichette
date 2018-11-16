@@ -13,12 +13,38 @@ namespace CreaEtichette.Data
         public CreaEtichetteBusiness() : base() { }
 
         [DataContext]
-        public void LeggiUtente(EtichetteDS ds, string User)
+        public void FillMAGAZZ(EtichetteDS ds, string IDMAGAZZ)
         {
             CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
-            a.LeggiUtente(ds, User);
+            a.FillMAGAZZ(ds, IDMAGAZZ);
         }
 
-     
+        [DataContext]
+        public void TrovaArticolo(EtichetteDS ds, string Modello)
+        {
+            CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
+            a.TrovaArticolo(ds, Modello);
+        }
+
+        [DataContext]
+        public void FillUSR_IMPORT_MAGAZZ(EtichetteDS ds, string IDMAGAZZ)
+        {
+            CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
+            a.FillUSR_IMPORT_MAGAZZ(ds, IDMAGAZZ);
+        }
+
+        [DataContext]
+        public void FillETI_ARTICOLI(EtichetteDS ds, string IDMAGAZZ)
+        {
+            CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
+            a.FillETI_ARTICOLI(ds, IDMAGAZZ);
+        }
+
+        [DataContext(true)]
+        public void UpdateETI_ARTICOLI(EtichetteDS ds)
+        {
+            CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
+            a.UpdateTable(ds.ETI_ARTICOLI.TableName, ds);
+        }
     }
 }

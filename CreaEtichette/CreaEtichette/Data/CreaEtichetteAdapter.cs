@@ -16,19 +16,61 @@ namespace CreaEtichette.Data
             base(connection, transaction)
         { }
 
-        public void LeggiUtente(EtichetteDS ds, string User)
+        public void FillMAGAZZ(EtichetteDS ds, string IDMAGAZZ)
         {
-            string select = @"SELECT * FROM GRUPPO.USR_USER WHERE UIDUSER= $P<UTENTE>";
+            string select = @"SELECT * FROM GRUPPO.MAGAZZ WHERE IDMAGAZZ= $P<IDMAGAZZ>";
             ParamSet ps = new ParamSet();
 
-            ps.AddParam("UTENTE", DbType.String, User);
+            ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
             using (DbDataAdapter da = BuildDataAdapter(select, ps))
             {
-                da.Fill(ds.USR_USER);
+                da.Fill(ds.MAGAZZ);
             }
         }
 
+        public void TrovaArticolo(EtichetteDS ds, string Modello)
+        {
+            string select = @"SELECT * FROM GRUPPO.MAGAZZ WHERE MODELLO like $P<MODELLO>";
+            ParamSet ps = new ParamSet();
+            string MODELLO = string.Format("%{0}%", Modello);
+            ps.AddParam("MODELLO", DbType.String, MODELLO);
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.MAGAZZ);
+            }
+        }
+        public void FillUSR_IMPORT_MAGAZZ(EtichetteDS ds, string IDMAGAZZ)
+        {
+            string select = @"SELECT * FROM DITTA1.USR_IMPORT_MAGAZZ WHERE IDMAGAZZ= $P<IDMAGAZZ>";
+            ParamSet ps = new ParamSet();
 
+            ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.MAGAZZ);
+            }
+
+            select = @"SELECT * FROM DITTA2.USR_IMPORT_MAGAZZ WHERE IDMAGAZZ= $P<IDMAGAZZ>";
+            ps = new ParamSet();
+
+            ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.MAGAZZ);
+            }
+        }
+
+        public void FillETI_ARTICOLI(EtichetteDS ds, string IDMAGAZZ)
+        {
+            string select = @"SELECT * FROM ETI_ARTICOLI WHERE IDMAGAZZ= $P<IDMAGAZZ>";
+            ParamSet ps = new ParamSet();
+
+            ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.ETI_ARTICOLI);
+            }
+        }
         public void UpdateTable(string tablename, EtichetteDS ds)
         {
             string query = string.Format(CultureInfo.InvariantCulture, "SELECT * FROM {0}", tablename);
@@ -56,6 +98,6 @@ namespace CreaEtichette.Data
             }
         }
 
-      
+
     }
 }
