@@ -18,5 +18,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=RVL;User ID=ditta1;Password=ditta1;Unicode=True</Value>
     </Setting>
+    <Setting Name="Mittente" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">METALPLUS S.P.A.</Value>
+    </Setting>
+    <Setting Name="MittenteCodice" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0003205494</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

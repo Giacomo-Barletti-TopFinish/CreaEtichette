@@ -42,5 +42,23 @@ namespace CreaEtichette.Properties {
                 return ((string)(this["ConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("METALPLUS S.P.A.")]
+        public string Mittente {
+            get {
+                return ((string)(this["Mittente"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0003205494")]
+        public string MittenteCodice {
+            get {
+                return ((string)(this["MittenteCodice"]));
+            }
+        }
     }
 }

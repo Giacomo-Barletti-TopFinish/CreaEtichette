@@ -1,4 +1,6 @@
 ﻿using BarcodeLib;
+using CreaEtichette.Data;
+using CreaEtichette.Entities;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using RawPrint;
@@ -17,6 +19,7 @@ namespace CreaEtichette
 {
     public partial class Form1 : Form
     {
+        private EtichetteDS _ds = new EtichetteDS();
         public Form1()
         {
             InitializeComponent();
@@ -38,7 +41,7 @@ namespace CreaEtichette
 
             for (int i = 0; i < nEtichette.Value; i++)
             {
-                ZebraHelper.EtichettaLuisVuitton(PrinterName, txtSKU.Text, txtDescrizione.Text, txtQuantita.Text, txtStampaDa.Text);
+                ZebraHelper.EtichettaLuisVuitton(PrinterName, txtSKU_1.Text, txtDescrizione.Text, txtQuantita.Text, txtStampaDa.Text);
             }
         }
 
@@ -153,6 +156,26 @@ namespace CreaEtichette
             for (int i = 0; i < nEtichette_3.Value; i++)
             {
                 ZebraHelper.EtichettaLuisVuitton_3(PrinterName, txtSku_3.Text, txtDescrizione3.Text,txtDescrizione3_2.Text, txtQuantita_3.Text, txtFornitore_3.Text, txtArticolo_3.Text, txtCodice_3.Text);
+            }
+        }
+
+        private void btnTrova_Click(object sender, EventArgs e)
+        {
+            using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+            {
+                if (string.IsNullOrEmpty(txtModelloRicerca.Text)) return;
+
+                string modelloDaTrovare = txtModelloRicerca.Text.Trim().ToUpper();
+
+                _ds = new EtichetteDS();
+                bEtichetta.TrovaArticolo(_ds, modelloDaTrovare);
+
+                dgvArticoli.AutoGenerateColumns = true;
+                dgvArticoli.DataSource = _ds;
+                dgvArticoli.DataMember = _ds.MAGAZZ.TableName;
+
+
+
             }
         }
     }
