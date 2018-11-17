@@ -1,8 +1,5 @@
-﻿using BarcodeLib;
-using CreaEtichette.Data;
+﻿using CreaEtichette.Data;
 using CreaEtichette.Entities;
-using MigraDoc.DocumentObjectModel;
-using MigraDoc.Rendering;
 using RawPrint;
 using System;
 using System.Collections.Generic;
@@ -56,77 +53,14 @@ namespace CreaEtichette
                 ZebraHelper.EtichettaLuisVuitton(PrinterName, txtE1_SKU.Text, txtE1_Parziale.Text, txtE1_Quantita.Text, txtE1_StampatoDa.Text);
             }
         }
-
-        private MemoryStream EtichettaLuisVitton(string SKU, string descrizione, string quantita, string stampatada)
-        {
-            Document doc = new Document();
-            doc.DefaultPageSetup.PageWidth = Unit.FromCentimeter(10);
-            doc.DefaultPageSetup.PageHeight = Unit.FromCentimeter(5);
-            doc.DefaultPageSetup.BottomMargin = Unit.FromCentimeter(0.5);
-            doc.DefaultPageSetup.TopMargin = Unit.FromCentimeter(0.5);
-            doc.DefaultPageSetup.LeftMargin = Unit.FromCentimeter(0.1);
-            doc.DefaultPageSetup.RightMargin = Unit.FromCentimeter(0.1);
-
-            Section sec = doc.AddSection();
-            Paragraph p = sec.AddParagraph(SKU);
-            p.Format.Font.Bold = true;
-            p = sec.AddParagraph(descrizione);
-            p.Format.SpaceBefore = Unit.FromCentimeter(0.1);
-            string qta = string.Format("Qty:                  {0} UN", quantita.ToString());
-            p = sec.AddParagraph(qta);
-
-            p.Format.Font.Bold = true;
-            p.Format.SpaceBefore = Unit.FromCentimeter(0.4);
-            p = sec.AddParagraph(string.Format("PRINTED BY - {0} -", stampatada));
-            p.Format.SpaceBefore = Unit.FromCentimeter(0.1);
-
-            Border newBorder = new Border { Style = MigraDoc.DocumentObjectModel.BorderStyle.Single };
-            p = sec.AddParagraph();
-            p.Format.Borders.Top = newBorder;
-            p.Format.SpaceBefore = 0;
-            p.Format.SpaceAfter = 0;
-
-            string barcodeStr = string.Format("{0}/{1}", quantita.ToString().PadLeft(6, '0'), SKU);
-            System.Drawing.Image img = CreaBarcode(barcodeStr, 300, 50);
-            // img.Save(@"c:\temp\barcode.png");
-
-            ImageConverter _imageConverter = new ImageConverter();
-            byte[] image = (byte[])_imageConverter.ConvertTo(img, typeof(byte[]));
-
-
-            string imageStr = MigraDocFilenameFromByteArray(image);
-            sec.AddImage(imageStr);
-
-            PdfDocumentRenderer pdf = new PdfDocumentRenderer();
-            pdf.Document = doc;
-            pdf.RenderDocument();
-
-            MemoryStream ms = new MemoryStream();
-            pdf.Save(ms, false);
-            return ms;
-        }
+        
 
         private static string MigraDocFilenameFromByteArray(byte[] image)
         {
             return "base64:" + Convert.ToBase64String(image);
         }
 
-        private static System.Drawing.Image CreaBarcode(string barcodeStr, int width, int height)
-        {
-            BarcodeLib.Barcode barcode = new BarcodeLib.Barcode()
-            {
-                IncludeLabel = true,
-                Alignment = AlignmentPositions.CENTER,
-                Width = width,
-                Height = height,
-                RotateFlipType = RotateFlipType.RotateNoneFlipNone,
-                BackColor = System.Drawing.Color.White,
-                ForeColor = System.Drawing.Color.Black,
-            };
-
-            return barcode.Encode(TYPE.CODE128B, barcodeStr);
-        }
-
+     
         private void Form1_Load(object sender, EventArgs e)
         {
             foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
