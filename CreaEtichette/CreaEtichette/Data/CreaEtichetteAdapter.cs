@@ -47,7 +47,7 @@ namespace CreaEtichette.Data
             ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
             using (DbDataAdapter da = BuildDataAdapter(select, ps))
             {
-                da.Fill(ds.MAGAZZ);
+                da.Fill(ds.USR_IMPORT_MAGAZZ);
             }
 
             select = @"SELECT * FROM DITTA2.USR_IMPORT_MAGAZZ WHERE IDMAGAZZ= $P<IDMAGAZZ>";
@@ -56,7 +56,7 @@ namespace CreaEtichette.Data
             ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
             using (DbDataAdapter da = BuildDataAdapter(select, ps))
             {
-                da.Fill(ds.MAGAZZ);
+                da.Fill(ds.USR_IMPORT_MAGAZZ);
             }
         }
 
