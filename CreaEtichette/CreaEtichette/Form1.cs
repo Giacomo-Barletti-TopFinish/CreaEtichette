@@ -323,5 +323,23 @@ namespace CreaEtichette
             txtE3_DescrizioneModelloRiga1.Text = riga2;
 
         }
+
+        private void btnCommessa_Click(object sender, EventArgs e)
+        {
+            lblMessaggio.Text = string.Empty;
+            if(string.IsNullOrEmpty(txtIDMAGAZZ.Text))
+            {
+                lblMessaggio.Text = "Occorre selezionare prima un articolo";
+                return;
+            }
+
+            TrovaCommessaFrm dialog = new TrovaCommessaFrm();
+            dialog.IDMAGAZZ = txtIDMAGAZZ.Text;
+            if(dialog.ShowDialog()== DialogResult.OK)
+            {
+                txtE3_RigaCommessa.Text = dialog.Commessa;
+            }
+
+        }
     }
 }

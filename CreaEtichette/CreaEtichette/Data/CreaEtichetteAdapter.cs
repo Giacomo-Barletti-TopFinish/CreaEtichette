@@ -71,6 +71,24 @@ namespace CreaEtichette.Data
                 da.Fill(ds.ETI_ARTICOLI);
             }
         }
+
+        public void FillTEMP_COMMESSA(EtichetteDS ds, string IDMAGAZZ)
+        {
+            string select = @"SELECT trim(CLI.RAGIONESOC) as RAGIONESOC,trim(DT.RIFERIMENTO) as RIFERIMENTO,trim(DD.NRRIGA) as NRRIGA
+                                from DITTA1.USR_VENDITED DD 
+                                INNER JOIN DITTA1.USR_VENDITET DT ON DT.IDVENDITET = DD.IDVENDITET
+                                INNER JOIN GRUPPO.CLIFO CLI ON DT.CODICECLIFO = CLI.CODICE
+                                WHERE DD.IDMAGAZZ= $P<IDMAGAZZ>
+                                AND DT.IDTABTIPDOC='0000000022'
+                                order by DT.RIFERIMENTO, dd.nrriga ";
+            ParamSet ps = new ParamSet();
+
+            ps.AddParam("IDMAGAZZ", DbType.String, IDMAGAZZ);
+            using (DbDataAdapter da = BuildDataAdapter(select, ps))
+            {
+                da.Fill(ds.TEMP_COMMESSA);
+            }
+        }
         public void UpdateTable(string tablename, EtichetteDS ds)
         {
             string query = string.Format(CultureInfo.InvariantCulture, "SELECT * FROM {0}", tablename);

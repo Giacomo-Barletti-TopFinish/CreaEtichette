@@ -46,5 +46,12 @@ namespace CreaEtichette.Data
             CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
             a.UpdateTable(ds.ETI_ARTICOLI.TableName, ds);
         }
+
+        [DataContext]
+        public void FillTEMP_COMMESSA(EtichetteDS ds, string IDMAGAZZ)
+        {
+            CreaEtichetteAdapter a = new CreaEtichetteAdapter(DbConnection, DbTransaction);
+            a.FillTEMP_COMMESSA(ds, IDMAGAZZ);
+        }
     }
 }

@@ -676,6 +676,33 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TEMP_COMMESSA" msprop:Generator_TableClassName="TEMP_COMMESSADataTable" msprop:Generator_TableVarName="tableTEMP_COMMESSA" msprop:Generator_RowChangedName="TEMP_COMMESSARowChanged" msprop:Generator_TablePropName="TEMP_COMMESSA" msprop:Generator_RowDeletingName="TEMP_COMMESSARowDeleting" msprop:Generator_RowChangingName="TEMP_COMMESSARowChanging" msprop:Generator_RowEvHandlerName="TEMP_COMMESSARowChangeEventHandler" msprop:Generator_RowDeletedName="TEMP_COMMESSARowDeleted" msprop:Generator_RowClassName="TEMP_COMMESSARow" msprop:Generator_UserTableName="TEMP_COMMESSA" msprop:Generator_RowEvArgName="TEMP_COMMESSARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RAGIONESOC" msprop:Generator_ColumnVarNameInTable="columnRAGIONESOC" msprop:Generator_ColumnPropNameInRow="RAGIONESOC" msprop:Generator_ColumnPropNameInTable="RAGIONESOCColumn" msprop:Generator_UserColumnName="RAGIONESOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="254" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RIFERIMENTO" msprop:Generator_ColumnVarNameInTable="columnRIFERIMENTO" msprop:Generator_ColumnPropNameInRow="RIFERIMENTO" msprop:Generator_ColumnPropNameInTable="RIFERIMENTOColumn" msprop:Generator_UserColumnName="RIFERIMENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NRRIGA" msprop:Generator_ColumnVarNameInTable="columnNRRIGA" msprop:Generator_ColumnPropNameInRow="NRRIGA" msprop:Generator_ColumnPropNameInTable="NRRIGAColumn" msprop:Generator_UserColumnName="NRRIGA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

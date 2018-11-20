@@ -104,6 +104,7 @@
             this.txtSKU = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lblMessaggio = new System.Windows.Forms.Label();
+            this.btnCommessa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nE1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -488,6 +489,7 @@
             this.tabPage3.Controls.Add(this.nE3);
             this.tabPage3.Controls.Add(this.txtArticolo_3);
             this.tabPage3.Controls.Add(this.txtE3_RagioneSocialeCliente);
+            this.tabPage3.Controls.Add(this.btnCommessa);
             this.tabPage3.Controls.Add(this.btnStampaEtichetta3);
             this.tabPage3.Controls.Add(this.label17);
             this.tabPage3.Controls.Add(this.txtE3_RigaCommessa);
@@ -622,7 +624,7 @@
             this.txtE3_RigaCommessa.Location = new System.Drawing.Point(133, 220);
             this.txtE3_RigaCommessa.Margin = new System.Windows.Forms.Padding(4);
             this.txtE3_RigaCommessa.Name = "txtE3_RigaCommessa";
-            this.txtE3_RigaCommessa.Size = new System.Drawing.Size(375, 24);
+            this.txtE3_RigaCommessa.Size = new System.Drawing.Size(208, 24);
             this.txtE3_RigaCommessa.TabIndex = 25;
             this.txtE3_RigaCommessa.TabStop = false;
             // 
@@ -994,6 +996,18 @@
             this.lblMessaggio.Size = new System.Drawing.Size(0, 18);
             this.lblMessaggio.TabIndex = 9;
             // 
+            // btnCommessa
+            // 
+            this.btnCommessa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommessa.Location = new System.Drawing.Point(362, 216);
+            this.btnCommessa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCommessa.Name = "btnCommessa";
+            this.btnCommessa.Size = new System.Drawing.Size(146, 32);
+            this.btnCommessa.TabIndex = 28;
+            this.btnCommessa.Text = "Commessa...";
+            this.btnCommessa.UseVisualStyleBackColor = true;
+            this.btnCommessa.Click += new System.EventHandler(this.btnCommessa_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -1114,6 +1128,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label lblMessaggio;
         private System.Windows.Forms.Button btnPreparaEtichette;
+        private System.Windows.Forms.Button btnCommessa;
     }
 }
 
