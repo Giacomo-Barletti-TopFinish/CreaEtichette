@@ -31,7 +31,7 @@ namespace CreaEtichette
 
             sb.Append("^FO065,280^BY2");
             sb.Append("^A0N,40,30^BCN,60,N,N,N");
-            string barcode = string.Format(@"{0}/{1}", quantita, SKU);
+            string barcode = string.Format(@"{0}/{1}", quantita.PadLeft(6,'0'), SKU);
             sb.Append(string.Format(@"^FD{0}^FS", barcode));
             sb.Append("^FO120,340^AQN,35,32");
             sb.Append(string.Format(@"^FD{0}^FS", barcode));
