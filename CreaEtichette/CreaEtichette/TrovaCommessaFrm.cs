@@ -15,10 +15,13 @@ namespace CreaEtichette
     public partial class TrovaCommessaFrm : Form
     {
         private string _commessa;
+        private string _ragioneSociale;
         public string Commessa { get { return _commessa; } }
         EtichetteDS ds = new EtichetteDS();
         private string _IDMAGAZZ;
         public string IDMAGAZZ { set { _IDMAGAZZ = value; } }
+
+        public string RagioneSociale { get { return _ragioneSociale; } }
 
         public TrovaCommessaFrm()
         {
@@ -51,6 +54,7 @@ namespace CreaEtichette
             string oc = (String)r[1];
             string riga = (String)r[2];
 
+            _ragioneSociale = CLiente;
             _commessa = string.Format("{0}-{1}", oc.Trim(), riga.Trim());
             DialogResult = DialogResult.OK;
             Close();

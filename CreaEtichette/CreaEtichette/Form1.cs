@@ -338,6 +338,7 @@ namespace CreaEtichette
             if(dialog.ShowDialog()== DialogResult.OK)
             {
                 txtE3_RigaCommessa.Text = dialog.Commessa;
+                txtE3_RagioneSocialeCliente.Text = dialog.RagioneSociale;
             }
 
         }
