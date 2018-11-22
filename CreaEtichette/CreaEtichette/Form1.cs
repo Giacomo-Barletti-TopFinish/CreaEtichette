@@ -320,7 +320,7 @@ namespace CreaEtichette
 
             txtE3_CodiceModello.Text = txtCodiceModelloCliente.Text;
             txtE3_DescrizioneModelloRiga1.Text = riga1;
-            txtE3_DescrizioneModelloRiga1.Text = riga2;
+            txtE3_DescrizioneModelloRiga2.Text = riga2;
 
         }
 
