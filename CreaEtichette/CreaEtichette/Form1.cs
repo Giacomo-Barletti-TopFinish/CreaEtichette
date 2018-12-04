@@ -53,14 +53,14 @@ namespace CreaEtichette
                 ZebraHelper.EtichettaLuisVuitton(PrinterName, txtE1_SKU.Text, txtE1_Parziale.Text, txtE1_Quantita.Text, txtE1_StampatoDa.Text);
             }
         }
-        
+
 
         private static string MigraDocFilenameFromByteArray(byte[] image)
         {
             return "base64:" + Convert.ToBase64String(image);
         }
 
-     
+
         private void Form1_Load(object sender, EventArgs e)
         {
             foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
@@ -122,7 +122,7 @@ namespace CreaEtichette
                 string.IsNullOrEmpty(txtE3_RagioneSocialeCliente.Text) ||
                 string.IsNullOrEmpty(txtE3_CodiceModello.Text) ||
                 string.IsNullOrEmpty(txtE3_DescrizioneModelloRiga1.Text) ||
-               // string.IsNullOrEmpty(txtE3_DescrizioneModelloRiga2.Text) ||
+                // string.IsNullOrEmpty(txtE3_DescrizioneModelloRiga2.Text) ||
                 string.IsNullOrEmpty(txtE3_RigaCommessa.Text) ||
                 string.IsNullOrEmpty(txtE3_Quantita.Text))
             {
@@ -138,7 +138,7 @@ namespace CreaEtichette
 
             for (int i = 0; i < nE3.Value; i++)
             {
-                ZebraHelper.EtichettaLuisVuitton_3(PrinterName, txtE3_RigaCommessa.Text, txtE3_DescrizioneModelloRiga1.Text, txtE3_DescrizioneModelloRiga2.Text, txtE3_Quantita.Text, txtE3_Fornitore.Text, txtArticolo_3.Text, txtE3_CodiceModello.Text);
+                ZebraHelper.EtichettaLuisVuitton_3(PrinterName, txtE3_RigaCommessa.Text, txtE3_DescrizioneModelloRiga1.Text, txtE3_DescrizioneModelloRiga2.Text, txtE3_Quantita.Text, txtE3_Fornitore.Text, txtE3_RagioneSocialeCliente.Text, txtE3_CodiceModello.Text);
             }
         }
 
@@ -201,6 +201,7 @@ namespace CreaEtichette
                 txtCodiceColoreCliente.Text = eti.CODICECOLORE;
                 txtColoreCliente.Text = eti.COLORE;
                 txtParziale.Text = eti.IsPARZIALENull() ? string.Empty : eti.PARZIALE;
+                txtRTT.Text = eti.IsRTTNull() ? string.Empty : eti.RTT;
             }
             else if (import != null)
             {
@@ -225,6 +226,7 @@ namespace CreaEtichette
                 txtCodiceColoreCliente.Text = string.Empty;
                 txtColoreCliente.Text = string.Empty;
                 txtParziale.Text = string.Empty;
+                txtRTT.Text = string.Empty;
             }
             else
             {
@@ -234,6 +236,7 @@ namespace CreaEtichette
                 txtCodiceColoreCliente.Text = string.Empty;
                 txtColoreCliente.Text = string.Empty;
                 txtParziale.Text = string.Empty;
+                txtRTT.Text = string.Empty;
             }
         }
 
@@ -247,6 +250,7 @@ namespace CreaEtichette
             string codicecolore = txtCodiceColoreCliente.Text;
             string colore = txtColoreCliente.Text;
             string parziale = txtParziale.Text;
+            string RTT = txtRTT.Text;
 
             if (string.IsNullOrEmpty(SKU) ||
                 string.IsNullOrEmpty(codiceModello) ||
@@ -279,6 +283,8 @@ namespace CreaEtichette
                 eti.MODELLO = modello;
                 eti.COLORE = colore;
                 eti.PARZIALE = parziale;
+                if (!string.IsNullOrEmpty(RTT))
+                    eti.RTT = RTT;
                 _ds.ETI_ARTICOLI.AddETI_ARTICOLIRow(eti);
             }
             else
@@ -289,6 +295,8 @@ namespace CreaEtichette
                 eti.MODELLO = modello;
                 eti.COLORE = colore;
                 eti.PARZIALE = parziale;
+                if (!string.IsNullOrEmpty(RTT))
+                    eti.RTT = RTT;
             }
 
             using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
@@ -303,11 +311,14 @@ namespace CreaEtichette
         {
             txtE1_SKU.Text = txtSKU.Text;
             txtE1_Parziale.Text = txtParziale.Text;
+            txtE1_Quantita.Text = string.Empty;
 
-            txtE2_CodiceModello.Text = txtCodiceModelloCliente.Text + " - " + txtSKU.Text;
+
+            txtE2_CodiceModello.Text = txtCodiceModelloCliente.Text + " - " + txtRTT.Text;
             txtE2_CodiceColore.Text = txtCodiceColoreCliente.Text;
             txtE2_DescrizioneColore.Text = txtColoreCliente.Text;
             txtE2_SKU.Text = txtSKU.Text;
+            txtE2_Quantita.Text = string.Empty;
 
             string riga1 = txtModelloCliente.Text;
             string riga2 = string.Empty;
@@ -317,7 +328,9 @@ namespace CreaEtichette
                 riga2 = txtModelloCliente.Text.Substring(40);
             }
 
-
+            txtE3_RagioneSocialeCliente.Text = string.Empty;
+            txtE3_RigaCommessa.Text = string.Empty;
+            txtE3_Quantita.Text = string.Empty;
             txtE3_CodiceModello.Text = txtCodiceModelloCliente.Text;
             txtE3_DescrizioneModelloRiga1.Text = riga1;
             txtE3_DescrizioneModelloRiga2.Text = riga2;
@@ -327,7 +340,7 @@ namespace CreaEtichette
         private void btnCommessa_Click(object sender, EventArgs e)
         {
             lblMessaggio.Text = string.Empty;
-            if(string.IsNullOrEmpty(txtIDMAGAZZ.Text))
+            if (string.IsNullOrEmpty(txtIDMAGAZZ.Text))
             {
                 lblMessaggio.Text = "Occorre selezionare prima un articolo";
                 return;
@@ -335,7 +348,7 @@ namespace CreaEtichette
 
             TrovaCommessaFrm dialog = new TrovaCommessaFrm();
             dialog.IDMAGAZZ = txtIDMAGAZZ.Text;
-            if(dialog.ShowDialog()== DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 txtE3_RigaCommessa.Text = dialog.Commessa;
                 txtE3_RagioneSocialeCliente.Text = dialog.RagioneSociale;

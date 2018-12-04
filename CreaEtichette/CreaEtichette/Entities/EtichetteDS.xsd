@@ -15,7 +15,7 @@
   <xs:element name="EtichetteDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EtichetteDS" msprop:Generator_UserDSName="EtichetteDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ETI_ARTICOLI" msprop:Generator_TableClassName="ETI_ARTICOLIDataTable" msprop:Generator_TableVarName="tableETI_ARTICOLI" msprop:Generator_TablePropName="ETI_ARTICOLI" msprop:Generator_RowDeletingName="ETI_ARTICOLIRowDeleting" msprop:Generator_RowChangingName="ETI_ARTICOLIRowChanging" msprop:Generator_RowEvHandlerName="ETI_ARTICOLIRowChangeEventHandler" msprop:Generator_RowDeletedName="ETI_ARTICOLIRowDeleted" msprop:Generator_UserTableName="ETI_ARTICOLI" msprop:Generator_RowChangedName="ETI_ARTICOLIRowChanged" msprop:Generator_RowEvArgName="ETI_ARTICOLIRowChangeEvent" msprop:Generator_RowClassName="ETI_ARTICOLIRow">
+        <xs:element name="ETI_ARTICOLI" msprop:Generator_TableClassName="ETI_ARTICOLIDataTable" msprop:Generator_TableVarName="tableETI_ARTICOLI" msprop:Generator_RowChangedName="ETI_ARTICOLIRowChanged" msprop:Generator_TablePropName="ETI_ARTICOLI" msprop:Generator_RowDeletingName="ETI_ARTICOLIRowDeleting" msprop:Generator_RowChangingName="ETI_ARTICOLIRowChanging" msprop:Generator_RowEvHandlerName="ETI_ARTICOLIRowChangeEventHandler" msprop:Generator_RowDeletedName="ETI_ARTICOLIRowDeleted" msprop:Generator_RowClassName="ETI_ARTICOLIRow" msprop:Generator_UserTableName="ETI_ARTICOLI" msprop:Generator_RowEvArgName="ETI_ARTICOLIRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDARTICOLI" msprop:Generator_ColumnVarNameInTable="columnIDARTICOLI" msprop:Generator_ColumnPropNameInRow="IDARTICOLI" msprop:Generator_ColumnPropNameInTable="IDARTICOLIColumn" msprop:Generator_UserColumnName="IDARTICOLI" type="xs:decimal" minOccurs="0" />
@@ -68,10 +68,17 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="RTT" msprop:Generator_ColumnVarNameInTable="columnRTT" msprop:Generator_ColumnPropNameInRow="RTT" msprop:Generator_ColumnPropNameInTable="RTTColumn" msprop:Generator_UserColumnName="RTT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MAGAZZ" msprop:Generator_TableClassName="MAGAZZDataTable" msprop:Generator_TableVarName="tableMAGAZZ" msprop:Generator_TablePropName="MAGAZZ" msprop:Generator_RowDeletingName="MAGAZZRowDeleting" msprop:Generator_RowChangingName="MAGAZZRowChanging" msprop:Generator_RowEvHandlerName="MAGAZZRowChangeEventHandler" msprop:Generator_RowDeletedName="MAGAZZRowDeleted" msprop:Generator_UserTableName="MAGAZZ" msprop:Generator_RowChangedName="MAGAZZRowChanged" msprop:Generator_RowEvArgName="MAGAZZRowChangeEvent" msprop:Generator_RowClassName="MAGAZZRow">
+        <xs:element name="MAGAZZ" msprop:Generator_TableClassName="MAGAZZDataTable" msprop:Generator_TableVarName="tableMAGAZZ" msprop:Generator_RowChangedName="MAGAZZRowChanged" msprop:Generator_TablePropName="MAGAZZ" msprop:Generator_RowDeletingName="MAGAZZRowDeleting" msprop:Generator_RowChangingName="MAGAZZRowChanging" msprop:Generator_RowEvHandlerName="MAGAZZRowChangeEventHandler" msprop:Generator_RowDeletedName="MAGAZZRowDeleted" msprop:Generator_RowClassName="MAGAZZRow" msprop:Generator_UserTableName="MAGAZZ" msprop:Generator_RowEvArgName="MAGAZZRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDMAGAZZ" msprop:Generator_ColumnVarNameInTable="columnIDMAGAZZ" msprop:Generator_ColumnPropNameInRow="IDMAGAZZ" msprop:Generator_ColumnPropNameInTable="IDMAGAZZColumn" msprop:Generator_UserColumnName="IDMAGAZZ">
@@ -556,7 +563,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="USR_IMPORT_MAGAZZ" msprop:Generator_TableClassName="USR_IMPORT_MAGAZZDataTable" msprop:Generator_TableVarName="tableUSR_IMPORT_MAGAZZ" msprop:Generator_TablePropName="USR_IMPORT_MAGAZZ" msprop:Generator_RowDeletingName="USR_IMPORT_MAGAZZRowDeleting" msprop:Generator_RowChangingName="USR_IMPORT_MAGAZZRowChanging" msprop:Generator_RowEvHandlerName="USR_IMPORT_MAGAZZRowChangeEventHandler" msprop:Generator_RowDeletedName="USR_IMPORT_MAGAZZRowDeleted" msprop:Generator_UserTableName="USR_IMPORT_MAGAZZ" msprop:Generator_RowChangedName="USR_IMPORT_MAGAZZRowChanged" msprop:Generator_RowEvArgName="USR_IMPORT_MAGAZZRowChangeEvent" msprop:Generator_RowClassName="USR_IMPORT_MAGAZZRow">
+        <xs:element name="USR_IMPORT_MAGAZZ" msprop:Generator_TableClassName="USR_IMPORT_MAGAZZDataTable" msprop:Generator_TableVarName="tableUSR_IMPORT_MAGAZZ" msprop:Generator_RowChangedName="USR_IMPORT_MAGAZZRowChanged" msprop:Generator_TablePropName="USR_IMPORT_MAGAZZ" msprop:Generator_RowDeletingName="USR_IMPORT_MAGAZZRowDeleting" msprop:Generator_RowChangingName="USR_IMPORT_MAGAZZRowChanging" msprop:Generator_RowEvHandlerName="USR_IMPORT_MAGAZZRowChangeEventHandler" msprop:Generator_RowDeletedName="USR_IMPORT_MAGAZZRowDeleted" msprop:Generator_RowClassName="USR_IMPORT_MAGAZZRow" msprop:Generator_UserTableName="USR_IMPORT_MAGAZZ" msprop:Generator_RowEvArgName="USR_IMPORT_MAGAZZRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDIMPORTMAGAZZ" msprop:Generator_ColumnVarNameInTable="columnIDIMPORTMAGAZZ" msprop:Generator_ColumnPropNameInRow="IDIMPORTMAGAZZ" msprop:Generator_ColumnPropNameInTable="IDIMPORTMAGAZZColumn" msprop:Generator_UserColumnName="IDIMPORTMAGAZZ">
@@ -676,7 +683,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TEMP_COMMESSA" msprop:Generator_TableClassName="TEMP_COMMESSADataTable" msprop:Generator_TableVarName="tableTEMP_COMMESSA" msprop:Generator_RowChangedName="TEMP_COMMESSARowChanged" msprop:Generator_TablePropName="TEMP_COMMESSA" msprop:Generator_RowDeletingName="TEMP_COMMESSARowDeleting" msprop:Generator_RowChangingName="TEMP_COMMESSARowChanging" msprop:Generator_RowEvHandlerName="TEMP_COMMESSARowChangeEventHandler" msprop:Generator_RowDeletedName="TEMP_COMMESSARowDeleted" msprop:Generator_RowClassName="TEMP_COMMESSARow" msprop:Generator_UserTableName="TEMP_COMMESSA" msprop:Generator_RowEvArgName="TEMP_COMMESSARowChangeEvent">
+        <xs:element name="TEMP_COMMESSA" msprop:Generator_TableClassName="TEMP_COMMESSADataTable" msprop:Generator_TableVarName="tableTEMP_COMMESSA" msprop:Generator_TablePropName="TEMP_COMMESSA" msprop:Generator_RowDeletingName="TEMP_COMMESSARowDeleting" msprop:Generator_RowChangingName="TEMP_COMMESSARowChanging" msprop:Generator_RowEvHandlerName="TEMP_COMMESSARowChangeEventHandler" msprop:Generator_RowDeletedName="TEMP_COMMESSARowDeleted" msprop:Generator_UserTableName="TEMP_COMMESSA" msprop:Generator_RowChangedName="TEMP_COMMESSARowChanged" msprop:Generator_RowEvArgName="TEMP_COMMESSARowChangeEvent" msprop:Generator_RowClassName="TEMP_COMMESSARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="RAGIONESOC" msprop:Generator_ColumnVarNameInTable="columnRAGIONESOC" msprop:Generator_ColumnPropNameInRow="RAGIONESOC" msprop:Generator_ColumnPropNameInTable="RAGIONESOCColumn" msprop:Generator_UserColumnName="RAGIONESOC" minOccurs="0">

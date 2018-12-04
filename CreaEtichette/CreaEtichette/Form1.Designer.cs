@@ -66,8 +66,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.nE3 = new System.Windows.Forms.NumericUpDown();
-            this.txtArticolo_3 = new System.Windows.Forms.Label();
+            this.lblArticolo3 = new System.Windows.Forms.Label();
             this.txtE3_RagioneSocialeCliente = new System.Windows.Forms.TextBox();
+            this.btnCommessa = new System.Windows.Forms.Button();
             this.btnStampaEtichetta3 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.txtE3_RigaCommessa = new System.Windows.Forms.TextBox();
@@ -104,7 +105,8 @@
             this.txtSKU = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lblMessaggio = new System.Windows.Forms.Label();
-            this.btnCommessa = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtRTT = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nE1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -487,7 +489,7 @@
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.nE3);
-            this.tabPage3.Controls.Add(this.txtArticolo_3);
+            this.tabPage3.Controls.Add(this.lblArticolo3);
             this.tabPage3.Controls.Add(this.txtE3_RagioneSocialeCliente);
             this.tabPage3.Controls.Add(this.btnCommessa);
             this.tabPage3.Controls.Add(this.btnStampaEtichetta3);
@@ -575,16 +577,16 @@
             0,
             0});
             // 
-            // txtArticolo_3
+            // lblArticolo3
             // 
-            this.txtArticolo_3.AutoSize = true;
-            this.txtArticolo_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArticolo_3.Location = new System.Drawing.Point(11, 67);
-            this.txtArticolo_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtArticolo_3.Name = "txtArticolo_3";
-            this.txtArticolo_3.Size = new System.Drawing.Size(114, 18);
-            this.txtArticolo_3.TabIndex = 30;
-            this.txtArticolo_3.Text = "Ragione sociale";
+            this.lblArticolo3.AutoSize = true;
+            this.lblArticolo3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArticolo3.Location = new System.Drawing.Point(11, 67);
+            this.lblArticolo3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblArticolo3.Name = "lblArticolo3";
+            this.lblArticolo3.Size = new System.Drawing.Size(114, 18);
+            this.lblArticolo3.TabIndex = 30;
+            this.lblArticolo3.Text = "Ragione sociale";
             // 
             // txtE3_RagioneSocialeCliente
             // 
@@ -594,6 +596,18 @@
             this.txtE3_RagioneSocialeCliente.Name = "txtE3_RagioneSocialeCliente";
             this.txtE3_RagioneSocialeCliente.Size = new System.Drawing.Size(375, 24);
             this.txtE3_RagioneSocialeCliente.TabIndex = 22;
+            // 
+            // btnCommessa
+            // 
+            this.btnCommessa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommessa.Location = new System.Drawing.Point(362, 216);
+            this.btnCommessa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCommessa.Name = "btnCommessa";
+            this.btnCommessa.Size = new System.Drawing.Size(146, 32);
+            this.btnCommessa.TabIndex = 28;
+            this.btnCommessa.Text = "Commessa...";
+            this.btnCommessa.UseVisualStyleBackColor = true;
+            this.btnCommessa.Click += new System.EventHandler(this.btnCommessa_Click);
             // 
             // btnStampaEtichetta3
             // 
@@ -744,7 +758,7 @@
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Location = new System.Drawing.Point(573, 101);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 169);
+            this.groupBox1.Size = new System.Drawing.Size(436, 136);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "METAL-PLUS";
@@ -752,7 +766,7 @@
             // txtModelloMetalplusDescrizione
             // 
             this.txtModelloMetalplusDescrizione.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelloMetalplusDescrizione.Location = new System.Drawing.Point(136, 117);
+            this.txtModelloMetalplusDescrizione.Location = new System.Drawing.Point(136, 102);
             this.txtModelloMetalplusDescrizione.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelloMetalplusDescrizione.Name = "txtModelloMetalplusDescrizione";
             this.txtModelloMetalplusDescrizione.ReadOnly = true;
@@ -763,7 +777,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(14, 120);
+            this.label23.Location = new System.Drawing.Point(14, 105);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(109, 18);
@@ -773,7 +787,7 @@
             // txtModelloMetalplus
             // 
             this.txtModelloMetalplus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelloMetalplus.Location = new System.Drawing.Point(136, 77);
+            this.txtModelloMetalplus.Location = new System.Drawing.Point(136, 62);
             this.txtModelloMetalplus.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelloMetalplus.Name = "txtModelloMetalplus";
             this.txtModelloMetalplus.ReadOnly = true;
@@ -784,7 +798,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(41, 80);
+            this.label22.Location = new System.Drawing.Point(41, 65);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(82, 18);
@@ -794,7 +808,7 @@
             // txtIDMAGAZZ
             // 
             this.txtIDMAGAZZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDMAGAZZ.Location = new System.Drawing.Point(136, 40);
+            this.txtIDMAGAZZ.Location = new System.Drawing.Point(136, 25);
             this.txtIDMAGAZZ.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDMAGAZZ.Name = "txtIDMAGAZZ";
             this.txtIDMAGAZZ.ReadOnly = true;
@@ -805,7 +819,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(40, 43);
+            this.label21.Location = new System.Drawing.Point(40, 28);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(83, 18);
@@ -826,11 +840,13 @@
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.txtCodiceModelloCliente);
             this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Controls.Add(this.txtRTT);
+            this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Controls.Add(this.txtSKU);
             this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Location = new System.Drawing.Point(573, 293);
+            this.groupBox2.Location = new System.Drawing.Point(573, 243);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(436, 267);
+            this.groupBox2.Size = new System.Drawing.Size(436, 317);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CLIENTE";
@@ -838,7 +854,7 @@
             // btnPreparaEtichette
             // 
             this.btnPreparaEtichette.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPreparaEtichette.Location = new System.Drawing.Point(232, 220);
+            this.btnPreparaEtichette.Location = new System.Drawing.Point(232, 274);
             this.btnPreparaEtichette.Margin = new System.Windows.Forms.Padding(4);
             this.btnPreparaEtichette.Name = "btnPreparaEtichette";
             this.btnPreparaEtichette.Size = new System.Drawing.Size(145, 32);
@@ -850,7 +866,7 @@
             // btnSalva
             // 
             this.btnSalva.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalva.Location = new System.Drawing.Point(66, 220);
+            this.btnSalva.Location = new System.Drawing.Point(66, 274);
             this.btnSalva.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(105, 32);
@@ -862,7 +878,7 @@
             // txtParziale
             // 
             this.txtParziale.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtParziale.Location = new System.Drawing.Point(170, 184);
+            this.txtParziale.Location = new System.Drawing.Point(170, 222);
             this.txtParziale.Margin = new System.Windows.Forms.Padding(4);
             this.txtParziale.MaxLength = 20;
             this.txtParziale.Name = "txtParziale";
@@ -873,7 +889,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(17, 187);
+            this.label29.Location = new System.Drawing.Point(17, 225);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(77, 18);
@@ -883,7 +899,7 @@
             // txtColoreCliente
             // 
             this.txtColoreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtColoreCliente.Location = new System.Drawing.Point(170, 152);
+            this.txtColoreCliente.Location = new System.Drawing.Point(170, 189);
             this.txtColoreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtColoreCliente.MaxLength = 30;
             this.txtColoreCliente.Name = "txtColoreCliente";
@@ -894,7 +910,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(17, 155);
+            this.label28.Location = new System.Drawing.Point(17, 192);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(72, 18);
@@ -904,7 +920,7 @@
             // txtCodiceColoreCliente
             // 
             this.txtCodiceColoreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodiceColoreCliente.Location = new System.Drawing.Point(170, 120);
+            this.txtCodiceColoreCliente.Location = new System.Drawing.Point(170, 156);
             this.txtCodiceColoreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodiceColoreCliente.MaxLength = 15;
             this.txtCodiceColoreCliente.Name = "txtCodiceColoreCliente";
@@ -915,7 +931,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(17, 123);
+            this.label27.Location = new System.Drawing.Point(17, 159);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(134, 18);
@@ -925,7 +941,7 @@
             // txtModelloCliente
             // 
             this.txtModelloCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelloCliente.Location = new System.Drawing.Point(170, 88);
+            this.txtModelloCliente.Location = new System.Drawing.Point(170, 123);
             this.txtModelloCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtModelloCliente.MaxLength = 50;
             this.txtModelloCliente.Name = "txtModelloCliente";
@@ -936,7 +952,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(17, 91);
+            this.label26.Location = new System.Drawing.Point(17, 126);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(82, 18);
@@ -946,7 +962,7 @@
             // txtCodiceModelloCliente
             // 
             this.txtCodiceModelloCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodiceModelloCliente.Location = new System.Drawing.Point(170, 56);
+            this.txtCodiceModelloCliente.Location = new System.Drawing.Point(170, 90);
             this.txtCodiceModelloCliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodiceModelloCliente.MaxLength = 15;
             this.txtCodiceModelloCliente.Name = "txtCodiceModelloCliente";
@@ -957,7 +973,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(17, 59);
+            this.label25.Location = new System.Drawing.Point(17, 93);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(144, 18);
@@ -996,17 +1012,26 @@
             this.lblMessaggio.Size = new System.Drawing.Size(0, 18);
             this.lblMessaggio.TabIndex = 9;
             // 
-            // btnCommessa
+            // label30
             // 
-            this.btnCommessa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCommessa.Location = new System.Drawing.Point(362, 216);
-            this.btnCommessa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCommessa.Name = "btnCommessa";
-            this.btnCommessa.Size = new System.Drawing.Size(146, 32);
-            this.btnCommessa.TabIndex = 28;
-            this.btnCommessa.Text = "Commessa...";
-            this.btnCommessa.UseVisualStyleBackColor = true;
-            this.btnCommessa.Click += new System.EventHandler(this.btnCommessa_Click);
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(17, 60);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(96, 18);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "CAMPO RTT";
+            // 
+            // txtRTT
+            // 
+            this.txtRTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRTT.Location = new System.Drawing.Point(170, 57);
+            this.txtRTT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRTT.MaxLength = 12;
+            this.txtRTT.Name = "txtRTT";
+            this.txtRTT.Size = new System.Drawing.Size(259, 24);
+            this.txtRTT.TabIndex = 5;
             // 
             // Form1
             // 
@@ -1090,7 +1115,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.NumericUpDown nE3;
-        private System.Windows.Forms.Label txtArticolo_3;
+        private System.Windows.Forms.Label lblArticolo3;
         private System.Windows.Forms.TextBox txtE3_RagioneSocialeCliente;
         private System.Windows.Forms.Button btnStampaEtichetta3;
         private System.Windows.Forms.Label label17;
@@ -1129,6 +1154,8 @@
         private System.Windows.Forms.Label lblMessaggio;
         private System.Windows.Forms.Button btnPreparaEtichette;
         private System.Windows.Forms.Button btnCommessa;
+        private System.Windows.Forms.TextBox txtRTT;
+        private System.Windows.Forms.Label label30;
     }
 }
 

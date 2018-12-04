@@ -400,6 +400,8 @@ namespace CreaEtichette.Entities {
             
             private global::System.Data.DataColumn columnPARZIALE;
             
+            private global::System.Data.DataColumn columnRTT;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public ETI_ARTICOLIDataTable() {
@@ -499,6 +501,14 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn RTTColumn {
+                get {
+                    return this.columnRTT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -534,7 +544,7 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ETI_ARTICOLIRow AddETI_ARTICOLIRow(decimal IDARTICOLI, string IDMAGAZZ, string CODICEMODELLO, string CODICECOLORE, string COLORE, string SKU, string MODELLO, string PARZIALE) {
+            public ETI_ARTICOLIRow AddETI_ARTICOLIRow(decimal IDARTICOLI, string IDMAGAZZ, string CODICEMODELLO, string CODICECOLORE, string COLORE, string SKU, string MODELLO, string PARZIALE, string RTT) {
                 ETI_ARTICOLIRow rowETI_ARTICOLIRow = ((ETI_ARTICOLIRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IDARTICOLI,
@@ -544,7 +554,8 @@ namespace CreaEtichette.Entities {
                         COLORE,
                         SKU,
                         MODELLO,
-                        PARZIALE};
+                        PARZIALE,
+                        RTT};
                 rowETI_ARTICOLIRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowETI_ARTICOLIRow);
                 return rowETI_ARTICOLIRow;
@@ -575,6 +586,7 @@ namespace CreaEtichette.Entities {
                 this.columnSKU = base.Columns["SKU"];
                 this.columnMODELLO = base.Columns["MODELLO"];
                 this.columnPARZIALE = base.Columns["PARZIALE"];
+                this.columnRTT = base.Columns["RTT"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -596,6 +608,8 @@ namespace CreaEtichette.Entities {
                 base.Columns.Add(this.columnMODELLO);
                 this.columnPARZIALE = new global::System.Data.DataColumn("PARZIALE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPARZIALE);
+                this.columnRTT = new global::System.Data.DataColumn("RTT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRTT);
                 this.columnIDMAGAZZ.AllowDBNull = false;
                 this.columnIDMAGAZZ.MaxLength = 10;
                 this.columnCODICEMODELLO.AllowDBNull = false;
@@ -609,6 +623,7 @@ namespace CreaEtichette.Entities {
                 this.columnMODELLO.AllowDBNull = false;
                 this.columnMODELLO.MaxLength = 50;
                 this.columnPARZIALE.MaxLength = 20;
+                this.columnRTT.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3490,6 +3505,22 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string RTT {
+                get {
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.RTTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RTT\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableETI_ARTICOLI.RTTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIDARTICOLINull() {
                 return this.IsNull(this.tableETI_ARTICOLI.IDARTICOLIColumn);
             }
@@ -3510,6 +3541,18 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetPARZIALENull() {
                 this[this.tableETI_ARTICOLI.PARZIALEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRTTNull() {
+                return this.IsNull(this.tableETI_ARTICOLI.RTTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRTTNull() {
+                this[this.tableETI_ARTICOLI.RTTColumn] = global::System.Convert.DBNull;
             }
         }
         
