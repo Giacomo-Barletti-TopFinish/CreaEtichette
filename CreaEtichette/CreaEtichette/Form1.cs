@@ -122,7 +122,7 @@ namespace CreaEtichette
                 string.IsNullOrEmpty(txtE3_RagioneSocialeCliente.Text) ||
                 string.IsNullOrEmpty(txtE3_CodiceModello.Text) ||
                 string.IsNullOrEmpty(txtE3_DescrizioneModelloRiga1.Text) ||
-                string.IsNullOrEmpty(txtE3_DescrizioneModelloRiga2.Text) ||
+               // string.IsNullOrEmpty(txtE3_DescrizioneModelloRiga2.Text) ||
                 string.IsNullOrEmpty(txtE3_RigaCommessa.Text) ||
                 string.IsNullOrEmpty(txtE3_Quantita.Text))
             {
@@ -304,7 +304,7 @@ namespace CreaEtichette
             txtE1_SKU.Text = txtSKU.Text;
             txtE1_Parziale.Text = txtParziale.Text;
 
-            txtE2_CodiceModello.Text = txtCodiceModelloCliente.Text;
+            txtE2_CodiceModello.Text = txtCodiceModelloCliente.Text + " - " + txtSKU.Text;
             txtE2_CodiceColore.Text = txtCodiceColoreCliente.Text;
             txtE2_DescrizioneColore.Text = txtColoreCliente.Text;
             txtE2_SKU.Text = txtSKU.Text;
