@@ -102,11 +102,12 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtCodiceModelloCliente = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.txtRTT = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.txtSKU = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lblMessaggio = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtRTT = new System.Windows.Forms.TextBox();
+            this.chkBC = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nE1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -980,6 +981,27 @@
             this.label25.TabIndex = 0;
             this.label25.Text = "CODICE MODELLO";
             // 
+            // txtRTT
+            // 
+            this.txtRTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRTT.Location = new System.Drawing.Point(170, 57);
+            this.txtRTT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRTT.MaxLength = 12;
+            this.txtRTT.Name = "txtRTT";
+            this.txtRTT.Size = new System.Drawing.Size(259, 24);
+            this.txtRTT.TabIndex = 5;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(17, 60);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(96, 18);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "CAMPO RTT";
+            // 
             // txtSKU
             // 
             this.txtSKU.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1012,32 +1034,22 @@
             this.lblMessaggio.Size = new System.Drawing.Size(0, 18);
             this.lblMessaggio.TabIndex = 9;
             // 
-            // label30
+            // chkBC
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(17, 60);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(96, 18);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "CAMPO RTT";
-            // 
-            // txtRTT
-            // 
-            this.txtRTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRTT.Location = new System.Drawing.Point(170, 57);
-            this.txtRTT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRTT.MaxLength = 12;
-            this.txtRTT.Name = "txtRTT";
-            this.txtRTT.Size = new System.Drawing.Size(259, 24);
-            this.txtRTT.TabIndex = 5;
+            this.chkBC.AutoSize = true;
+            this.chkBC.Location = new System.Drawing.Point(665, 21);
+            this.chkBC.Name = "chkBC";
+            this.chkBC.Size = new System.Drawing.Size(139, 22);
+            this.chkBC.TabIndex = 12;
+            this.chkBC.Text = "Business Central";
+            this.chkBC.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1607, 623);
+            this.Controls.Add(this.chkBC);
             this.Controls.Add(this.lblMessaggio);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1156,6 +1168,7 @@
         private System.Windows.Forms.Button btnCommessa;
         private System.Windows.Forms.TextBox txtRTT;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.CheckBox chkBC;
     }
 }
 

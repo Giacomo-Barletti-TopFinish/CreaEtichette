@@ -144,31 +144,40 @@ namespace CreaEtichette
 
         private void btnTrova_Click(object sender, EventArgs e)
         {
-            using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+            if (string.IsNullOrEmpty(txtModelloRicerca.Text)) return;
+
+            string modelloDaTrovare = txtModelloRicerca.Text.Trim().ToUpper();
+
+            _ds = new EtichetteDS();
+            if(chkBC.Checked)
             {
-                if (string.IsNullOrEmpty(txtModelloRicerca.Text)) return;
-
-                string modelloDaTrovare = txtModelloRicerca.Text.Trim().ToUpper();
-
-                _ds = new EtichetteDS();
-                bEtichetta.TrovaArticolo(_ds, modelloDaTrovare);
-
-                dgvArticoli.AutoGenerateColumns = true;
-                dgvArticoli.DataSource = _ds;
-                dgvArticoli.DataMember = _ds.MAGAZZ.TableName;
-                for (int i = 0; i < dgvArticoli.Columns.Count; i++)
-                    dgvArticoli.Columns[i].Visible = false;
-
-                dgvArticoli.Columns[1].Visible = true;
-                dgvArticoli.Columns[1].Width = 180;
-                dgvArticoli.Columns[2].Visible = true;
-                dgvArticoli.Columns[2].Width = 400;
-
-                System.Drawing.Font font = new System.Drawing.Font(dgvArticoli.Font.FontFamily, 8);
-
-                dgvArticoli.Font = font;
-
+                using (CreaEtichetteBusinesSQL bEtichetta = new CreaEtichetteBusinesSQL())
+                {
+                    bEtichetta.TrovaArticolo(_ds, modelloDaTrovare);
+                }
             }
+            else
+            {
+                using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+                {
+                    bEtichetta.TrovaArticolo(_ds, modelloDaTrovare);
+                }
+            }
+            dgvArticoli.AutoGenerateColumns = true;
+            dgvArticoli.DataSource = _ds;
+            dgvArticoli.DataMember = _ds.MAGAZZ.TableName;
+            for (int i = 0; i < dgvArticoli.Columns.Count; i++)
+                dgvArticoli.Columns[i].Visible = false;
+
+            dgvArticoli.Columns[1].Visible = true;
+            dgvArticoli.Columns[1].Width = 180;
+            dgvArticoli.Columns[2].Visible = true;
+            dgvArticoli.Columns[2].Width = 400;
+
+            System.Drawing.Font font = new System.Drawing.Font(dgvArticoli.Font.FontFamily, 8);
+
+            dgvArticoli.Font = font;
+
         }
 
         private void dgvArticoli_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -179,12 +188,25 @@ namespace CreaEtichette
             string modello = (String)r[1];
             string descrizione = (String)r[2];
 
-            using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+            if(chkBC.Checked)
             {
-                _ds.USR_IMPORT_MAGAZZ.Clear();
-                _ds.ETI_ARTICOLI.Clear();
-                bEtichetta.FillETI_ARTICOLI(_ds, IDMAGAZZ);
-                bEtichetta.FillUSR_IMPORT_MAGAZZ(_ds, IDMAGAZZ);
+                using (CreaEtichetteBusinesSQL bEtichetta = new CreaEtichetteBusinesSQL())
+                {
+                    _ds.USR_IMPORT_MAGAZZ.Clear();
+                    _ds.ETI_ARTICOLI.Clear();
+                    bEtichetta.FillETI_ARTICOLI(_ds, IDMAGAZZ);
+                }
+
+            }
+            else
+            {
+                using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+                {
+                    _ds.USR_IMPORT_MAGAZZ.Clear();
+                    _ds.ETI_ARTICOLI.Clear();
+                    bEtichetta.FillETI_ARTICOLI(_ds, IDMAGAZZ);
+                    bEtichetta.FillUSR_IMPORT_MAGAZZ(_ds, IDMAGAZZ);
+                }
             }
 
             txtIDMAGAZZ.Text = IDMAGAZZ;
@@ -298,12 +320,23 @@ namespace CreaEtichette
                 if (!string.IsNullOrEmpty(RTT))
                     eti.RTT = RTT;
             }
-
-            using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+            if(chkBC.Checked)
             {
-                bEtichetta.UpdateETI_ARTICOLI(_ds);
-                lblMessaggio.Text = "Articolo salvato";
-                _ds.AcceptChanges();
+                using (CreaEtichetteBusinesSQL bEtichetta = new CreaEtichetteBusinesSQL())
+                {
+                    bEtichetta.UpdateETI_ARTICOLI(_ds);
+                    lblMessaggio.Text = "Articolo salvato";
+                    _ds.AcceptChanges();
+                }
+            }
+            else
+            {
+                using (CreaEtichetteBusiness bEtichetta = new CreaEtichetteBusiness())
+                {
+                    bEtichetta.UpdateETI_ARTICOLI(_ds);
+                    lblMessaggio.Text = "Articolo salvato";
+                    _ds.AcceptChanges();
+                }
             }
         }
 

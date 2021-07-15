@@ -610,17 +610,11 @@ namespace CreaEtichette.Entities {
                 base.Columns.Add(this.columnPARZIALE);
                 this.columnRTT = new global::System.Data.DataColumn("RTT", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRTT);
-                this.columnIDMAGAZZ.AllowDBNull = false;
-                this.columnIDMAGAZZ.MaxLength = 10;
-                this.columnCODICEMODELLO.AllowDBNull = false;
+                this.columnIDMAGAZZ.MaxLength = 20;
                 this.columnCODICEMODELLO.MaxLength = 15;
-                this.columnCODICECOLORE.AllowDBNull = false;
                 this.columnCODICECOLORE.MaxLength = 15;
-                this.columnCOLORE.AllowDBNull = false;
                 this.columnCOLORE.MaxLength = 30;
-                this.columnSKU.AllowDBNull = false;
                 this.columnSKU.MaxLength = 12;
-                this.columnMODELLO.AllowDBNull = false;
                 this.columnMODELLO.MaxLength = 50;
                 this.columnPARZIALE.MaxLength = 20;
                 this.columnRTT.MaxLength = 20;
@@ -932,32 +926,6 @@ namespace CreaEtichette.Entities {
             private global::System.Data.DataColumn columnIDCONFACQ;
             
             private global::System.Data.DataColumn columnIDCONFVEN;
-            
-            private global::System.Data.DataColumn columnIDCONFSTOCK;
-            
-            private global::System.Data.DataColumn columnSALDIUMALTER_SN;
-            
-            private global::System.Data.DataColumn columnQMINMOV;
-            
-            private global::System.Data.DataColumn columnQPASSOMOV;
-            
-            private global::System.Data.DataColumn columnLOTTO_SN;
-            
-            private global::System.Data.DataColumn columnMATRICOLA_SN;
-            
-            private global::System.Data.DataColumn columnOFFSETTIME;
-            
-            private global::System.Data.DataColumn columnGGBEFORE;
-            
-            private global::System.Data.DataColumn columnGGAFTER;
-            
-            private global::System.Data.DataColumn columnQTAMINACQ;
-            
-            private global::System.Data.DataColumn columnUNIACQ;
-            
-            private global::System.Data.DataColumn columnFROMINVERSSN;
-            
-            private global::System.Data.DataColumn columnPERCXCOSTO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -1698,110 +1666,6 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDCONFSTOCKColumn {
-                get {
-                    return this.columnIDCONFSTOCK;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn SALDIUMALTER_SNColumn {
-                get {
-                    return this.columnSALDIUMALTER_SN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn QMINMOVColumn {
-                get {
-                    return this.columnQMINMOV;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn QPASSOMOVColumn {
-                get {
-                    return this.columnQPASSOMOV;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn LOTTO_SNColumn {
-                get {
-                    return this.columnLOTTO_SN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn MATRICOLA_SNColumn {
-                get {
-                    return this.columnMATRICOLA_SN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn OFFSETTIMEColumn {
-                get {
-                    return this.columnOFFSETTIME;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn GGBEFOREColumn {
-                get {
-                    return this.columnGGBEFORE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn GGAFTERColumn {
-                get {
-                    return this.columnGGAFTER;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn QTAMINACQColumn {
-                get {
-                    return this.columnQTAMINACQ;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn UNIACQColumn {
-                get {
-                    return this.columnUNIACQ;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn FROMINVERSSNColumn {
-                get {
-                    return this.columnFROMINVERSSN;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PERCXCOSTOColumn {
-                get {
-                    return this.columnPERCXCOSTO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1925,20 +1789,7 @@ namespace CreaEtichette.Entities {
                         string DESMODELLOBASE, 
                         decimal CONF_SN, 
                         string IDCONFACQ, 
-                        string IDCONFVEN, 
-                        string IDCONFSTOCK, 
-                        decimal SALDIUMALTER_SN, 
-                        decimal QMINMOV, 
-                        decimal QPASSOMOV, 
-                        decimal LOTTO_SN, 
-                        decimal MATRICOLA_SN, 
-                        decimal OFFSETTIME, 
-                        decimal GGBEFORE, 
-                        decimal GGAFTER, 
-                        decimal QTAMINACQ, 
-                        decimal UNIACQ, 
-                        decimal FROMINVERSSN, 
-                        decimal PERCXCOSTO) {
+                        string IDCONFVEN) {
                 MAGAZZRow rowMAGAZZRow = ((MAGAZZRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IDMAGAZZ,
@@ -2028,20 +1879,7 @@ namespace CreaEtichette.Entities {
                         DESMODELLOBASE,
                         CONF_SN,
                         IDCONFACQ,
-                        IDCONFVEN,
-                        IDCONFSTOCK,
-                        SALDIUMALTER_SN,
-                        QMINMOV,
-                        QPASSOMOV,
-                        LOTTO_SN,
-                        MATRICOLA_SN,
-                        OFFSETTIME,
-                        GGBEFORE,
-                        GGAFTER,
-                        QTAMINACQ,
-                        UNIACQ,
-                        FROMINVERSSN,
-                        PERCXCOSTO};
+                        IDCONFVEN};
                 rowMAGAZZRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMAGAZZRow);
                 return rowMAGAZZRow;
@@ -2152,19 +1990,6 @@ namespace CreaEtichette.Entities {
                 this.columnCONF_SN = base.Columns["CONF_SN"];
                 this.columnIDCONFACQ = base.Columns["IDCONFACQ"];
                 this.columnIDCONFVEN = base.Columns["IDCONFVEN"];
-                this.columnIDCONFSTOCK = base.Columns["IDCONFSTOCK"];
-                this.columnSALDIUMALTER_SN = base.Columns["SALDIUMALTER_SN"];
-                this.columnQMINMOV = base.Columns["QMINMOV"];
-                this.columnQPASSOMOV = base.Columns["QPASSOMOV"];
-                this.columnLOTTO_SN = base.Columns["LOTTO_SN"];
-                this.columnMATRICOLA_SN = base.Columns["MATRICOLA_SN"];
-                this.columnOFFSETTIME = base.Columns["OFFSETTIME"];
-                this.columnGGBEFORE = base.Columns["GGBEFORE"];
-                this.columnGGAFTER = base.Columns["GGAFTER"];
-                this.columnQTAMINACQ = base.Columns["QTAMINACQ"];
-                this.columnUNIACQ = base.Columns["UNIACQ"];
-                this.columnFROMINVERSSN = base.Columns["FROMINVERSSN"];
-                this.columnPERCXCOSTO = base.Columns["PERCXCOSTO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2346,56 +2171,17 @@ namespace CreaEtichette.Entities {
                 base.Columns.Add(this.columnIDCONFACQ);
                 this.columnIDCONFVEN = new global::System.Data.DataColumn("IDCONFVEN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIDCONFVEN);
-                this.columnIDCONFSTOCK = new global::System.Data.DataColumn("IDCONFSTOCK", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDCONFSTOCK);
-                this.columnSALDIUMALTER_SN = new global::System.Data.DataColumn("SALDIUMALTER_SN", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSALDIUMALTER_SN);
-                this.columnQMINMOV = new global::System.Data.DataColumn("QMINMOV", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQMINMOV);
-                this.columnQPASSOMOV = new global::System.Data.DataColumn("QPASSOMOV", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQPASSOMOV);
-                this.columnLOTTO_SN = new global::System.Data.DataColumn("LOTTO_SN", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLOTTO_SN);
-                this.columnMATRICOLA_SN = new global::System.Data.DataColumn("MATRICOLA_SN", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMATRICOLA_SN);
-                this.columnOFFSETTIME = new global::System.Data.DataColumn("OFFSETTIME", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOFFSETTIME);
-                this.columnGGBEFORE = new global::System.Data.DataColumn("GGBEFORE", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGGBEFORE);
-                this.columnGGAFTER = new global::System.Data.DataColumn("GGAFTER", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGGAFTER);
-                this.columnQTAMINACQ = new global::System.Data.DataColumn("QTAMINACQ", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQTAMINACQ);
-                this.columnUNIACQ = new global::System.Data.DataColumn("UNIACQ", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUNIACQ);
-                this.columnFROMINVERSSN = new global::System.Data.DataColumn("FROMINVERSSN", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFROMINVERSSN);
-                this.columnPERCXCOSTO = new global::System.Data.DataColumn("PERCXCOSTO", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPERCXCOSTO);
                 this.columnIDMAGAZZ.AllowDBNull = false;
-                this.columnIDMAGAZZ.MaxLength = 10;
+                this.columnIDMAGAZZ.MaxLength = 20;
                 this.columnMODELLO.AllowDBNull = false;
                 this.columnMODELLO.MaxLength = 30;
                 this.columnDESMAGAZZ.AllowDBNull = false;
                 this.columnDESMAGAZZ.MaxLength = 100;
-                this.columnQTAMINVEN.AllowDBNull = false;
-                this.columnUNIVEN.AllowDBNull = false;
-                this.columnUNIIMB.AllowDBNull = false;
-                this.columnPEZZICONF.AllowDBNull = false;
                 this.columnIDTABCATF.MaxLength = 10;
-                this.columnPESO.AllowDBNull = false;
-                this.columnUNITAPESO.AllowDBNull = false;
-                this.columnALTEZZA.AllowDBNull = false;
-                this.columnLARGHEZZA.AllowDBNull = false;
-                this.columnLUNGHEZZA.AllowDBNull = false;
-                this.columnIDTABSETT.AllowDBNull = false;
                 this.columnIDTABSETT.MaxLength = 10;
-                this.columnIDTABCLASS.AllowDBNull = false;
                 this.columnIDTABCLASS.MaxLength = 10;
                 this.columnIDTABSTAT.MaxLength = 10;
-                this.columnEVSCONTISN.AllowDBNull = false;
                 this.columnUTENTE.MaxLength = 10;
-                this.columnSTATOINS.AllowDBNull = false;
                 this.columnDIMMODELLO.MaxLength = 20;
                 this.columnNOCMAUTOSN.MaxLength = 1;
                 this.columnNOCUAUTOSN.MaxLength = 1;
@@ -2430,10 +2216,8 @@ namespace CreaEtichette.Entities {
                 this.columnCARMOD.MaxLength = 15;
                 this.columnPINSIDESN.MaxLength = 1;
                 this.columnPCUMULASN.MaxLength = 1;
-                this.columnPASSO.AllowDBNull = false;
                 this.columnPROPRIETA.MaxLength = 1;
                 this.columnNOTEMAGAZZ.MaxLength = 2000;
-                this.columnSUPERFICIE.AllowDBNull = false;
                 this.columnIDTABCATDIM.MaxLength = 10;
                 this.columnIDTABMAGDIM_BASE.MaxLength = 10;
                 this.columnFORNITOREPRDANAG.MaxLength = 10;
@@ -2443,7 +2227,6 @@ namespace CreaEtichette.Entities {
                 this.columnIDTIPOLISTINOPRDANAG.MaxLength = 10;
                 this.columnIDTIPOLISTINOACQDIBAANAG.MaxLength = 10;
                 this.columnIDTIPOLISTINOPRDDIBAANAG.MaxLength = 10;
-                this.columnPESOXMM.AllowDBNull = false;
                 this.columnIDMAGAZZSFRIDO.MaxLength = 10;
                 this.columnIDTABCATFUNC.MaxLength = 10;
                 this.columnIDTABCATMAGDIMEX.MaxLength = 10;
@@ -2451,22 +2234,8 @@ namespace CreaEtichette.Entities {
                 this.columnIDMAGAZZSTD.MaxLength = 10;
                 this.columnIDCOMPOSIZIONE.MaxLength = 10;
                 this.columnDESMODELLOBASE.MaxLength = 50;
-                this.columnCONF_SN.AllowDBNull = false;
                 this.columnIDCONFACQ.MaxLength = 10;
                 this.columnIDCONFVEN.MaxLength = 10;
-                this.columnIDCONFSTOCK.MaxLength = 10;
-                this.columnSALDIUMALTER_SN.AllowDBNull = false;
-                this.columnQMINMOV.AllowDBNull = false;
-                this.columnQPASSOMOV.AllowDBNull = false;
-                this.columnLOTTO_SN.AllowDBNull = false;
-                this.columnMATRICOLA_SN.AllowDBNull = false;
-                this.columnOFFSETTIME.AllowDBNull = false;
-                this.columnGGBEFORE.AllowDBNull = false;
-                this.columnGGAFTER.AllowDBNull = false;
-                this.columnQTAMINACQ.AllowDBNull = false;
-                this.columnUNIACQ.AllowDBNull = false;
-                this.columnFROMINVERSSN.AllowDBNull = false;
-                this.columnPERCXCOSTO.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3425,7 +3194,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string IDMAGAZZ {
                 get {
-                    return ((string)(this[this.tableETI_ARTICOLI.IDMAGAZZColumn]));
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.IDMAGAZZColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IDMAGAZZ\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableETI_ARTICOLI.IDMAGAZZColumn] = value;
@@ -3436,7 +3210,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CODICEMODELLO {
                 get {
-                    return ((string)(this[this.tableETI_ARTICOLI.CODICEMODELLOColumn]));
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.CODICEMODELLOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CODICEMODELLO\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableETI_ARTICOLI.CODICEMODELLOColumn] = value;
@@ -3447,7 +3226,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CODICECOLORE {
                 get {
-                    return ((string)(this[this.tableETI_ARTICOLI.CODICECOLOREColumn]));
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.CODICECOLOREColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CODICECOLORE\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableETI_ARTICOLI.CODICECOLOREColumn] = value;
@@ -3458,7 +3242,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string COLORE {
                 get {
-                    return ((string)(this[this.tableETI_ARTICOLI.COLOREColumn]));
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.COLOREColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'COLORE\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableETI_ARTICOLI.COLOREColumn] = value;
@@ -3469,7 +3258,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string SKU {
                 get {
-                    return ((string)(this[this.tableETI_ARTICOLI.SKUColumn]));
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.SKUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SKU\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableETI_ARTICOLI.SKUColumn] = value;
@@ -3480,7 +3274,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string MODELLO {
                 get {
-                    return ((string)(this[this.tableETI_ARTICOLI.MODELLOColumn]));
+                    try {
+                        return ((string)(this[this.tableETI_ARTICOLI.MODELLOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MODELLO\' in table \'ETI_ARTICOLI\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableETI_ARTICOLI.MODELLOColumn] = value;
@@ -3529,6 +3328,78 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIDARTICOLINull() {
                 this[this.tableETI_ARTICOLI.IDARTICOLIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsIDMAGAZZNull() {
+                return this.IsNull(this.tableETI_ARTICOLI.IDMAGAZZColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetIDMAGAZZNull() {
+                this[this.tableETI_ARTICOLI.IDMAGAZZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCODICEMODELLONull() {
+                return this.IsNull(this.tableETI_ARTICOLI.CODICEMODELLOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCODICEMODELLONull() {
+                this[this.tableETI_ARTICOLI.CODICEMODELLOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCODICECOLORENull() {
+                return this.IsNull(this.tableETI_ARTICOLI.CODICECOLOREColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCODICECOLORENull() {
+                this[this.tableETI_ARTICOLI.CODICECOLOREColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCOLORENull() {
+                return this.IsNull(this.tableETI_ARTICOLI.COLOREColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCOLORENull() {
+                this[this.tableETI_ARTICOLI.COLOREColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSKUNull() {
+                return this.IsNull(this.tableETI_ARTICOLI.SKUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSKUNull() {
+                this[this.tableETI_ARTICOLI.SKUColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsMODELLONull() {
+                return this.IsNull(this.tableETI_ARTICOLI.MODELLOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetMODELLONull() {
+                this[this.tableETI_ARTICOLI.MODELLOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3607,7 +3478,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal QTAMINVEN {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.QTAMINVENColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.QTAMINVENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QTAMINVEN\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.QTAMINVENColumn] = value;
@@ -3618,7 +3494,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal UNIVEN {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.UNIVENColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.UNIVENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UNIVEN\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.UNIVENColumn] = value;
@@ -3629,7 +3510,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal UNIIMB {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.UNIIMBColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.UNIIMBColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UNIIMB\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.UNIIMBColumn] = value;
@@ -3640,7 +3526,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal PEZZICONF {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.PEZZICONFColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.PEZZICONFColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PEZZICONF\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.PEZZICONFColumn] = value;
@@ -3667,7 +3558,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal PESO {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.PESOColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.PESOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PESO\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.PESOColumn] = value;
@@ -3678,7 +3574,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal UNITAPESO {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.UNITAPESOColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.UNITAPESOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UNITAPESO\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.UNITAPESOColumn] = value;
@@ -3689,7 +3590,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal ALTEZZA {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.ALTEZZAColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.ALTEZZAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ALTEZZA\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.ALTEZZAColumn] = value;
@@ -3700,7 +3606,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal LARGHEZZA {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.LARGHEZZAColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.LARGHEZZAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LARGHEZZA\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.LARGHEZZAColumn] = value;
@@ -3711,7 +3622,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal LUNGHEZZA {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.LUNGHEZZAColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.LUNGHEZZAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LUNGHEZZA\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.LUNGHEZZAColumn] = value;
@@ -3722,7 +3638,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string IDTABSETT {
                 get {
-                    return ((string)(this[this.tableMAGAZZ.IDTABSETTColumn]));
+                    try {
+                        return ((string)(this[this.tableMAGAZZ.IDTABSETTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IDTABSETT\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.IDTABSETTColumn] = value;
@@ -3733,7 +3654,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string IDTABCLASS {
                 get {
-                    return ((string)(this[this.tableMAGAZZ.IDTABCLASSColumn]));
+                    try {
+                        return ((string)(this[this.tableMAGAZZ.IDTABCLASSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IDTABCLASS\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.IDTABCLASSColumn] = value;
@@ -3760,7 +3686,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal EVSCONTISN {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.EVSCONTISNColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.EVSCONTISNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EVSCONTISN\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.EVSCONTISNColumn] = value;
@@ -3963,7 +3894,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal STATOINS {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.STATOINSColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.STATOINSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STATOINS\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.STATOINSColumn] = value;
@@ -4518,7 +4454,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal PASSO {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.PASSOColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.PASSOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PASSO\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.PASSOColumn] = value;
@@ -4561,7 +4502,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal SUPERFICIE {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.SUPERFICIEColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.SUPERFICIEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SUPERFICIE\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.SUPERFICIEColumn] = value;
@@ -4716,7 +4662,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal PESOXMM {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.PESOXMMColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.PESOXMMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PESOXMM\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.PESOXMMColumn] = value;
@@ -4839,7 +4790,12 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal CONF_SN {
                 get {
-                    return ((decimal)(this[this.tableMAGAZZ.CONF_SNColumn]));
+                    try {
+                        return ((decimal)(this[this.tableMAGAZZ.CONF_SNColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONF_SN\' in table \'MAGAZZ\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableMAGAZZ.CONF_SNColumn] = value;
@@ -4880,150 +4836,50 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string IDCONFSTOCK {
-                get {
-                    try {
-                        return ((string)(this[this.tableMAGAZZ.IDCONFSTOCKColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IDCONFSTOCK\' in table \'MAGAZZ\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableMAGAZZ.IDCONFSTOCKColumn] = value;
-                }
+            public bool IsQTAMINVENNull() {
+                return this.IsNull(this.tableMAGAZZ.QTAMINVENColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal SALDIUMALTER_SN {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.SALDIUMALTER_SNColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.SALDIUMALTER_SNColumn] = value;
-                }
+            public void SetQTAMINVENNull() {
+                this[this.tableMAGAZZ.QTAMINVENColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal QMINMOV {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.QMINMOVColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.QMINMOVColumn] = value;
-                }
+            public bool IsUNIVENNull() {
+                return this.IsNull(this.tableMAGAZZ.UNIVENColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal QPASSOMOV {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.QPASSOMOVColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.QPASSOMOVColumn] = value;
-                }
+            public void SetUNIVENNull() {
+                this[this.tableMAGAZZ.UNIVENColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal LOTTO_SN {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.LOTTO_SNColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.LOTTO_SNColumn] = value;
-                }
+            public bool IsUNIIMBNull() {
+                return this.IsNull(this.tableMAGAZZ.UNIIMBColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal MATRICOLA_SN {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.MATRICOLA_SNColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.MATRICOLA_SNColumn] = value;
-                }
+            public void SetUNIIMBNull() {
+                this[this.tableMAGAZZ.UNIIMBColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal OFFSETTIME {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.OFFSETTIMEColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.OFFSETTIMEColumn] = value;
-                }
+            public bool IsPEZZICONFNull() {
+                return this.IsNull(this.tableMAGAZZ.PEZZICONFColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal GGBEFORE {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.GGBEFOREColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.GGBEFOREColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal GGAFTER {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.GGAFTERColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.GGAFTERColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal QTAMINACQ {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.QTAMINACQColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.QTAMINACQColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal UNIACQ {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.UNIACQColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.UNIACQColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal FROMINVERSSN {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.FROMINVERSSNColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.FROMINVERSSNColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal PERCXCOSTO {
-                get {
-                    return ((decimal)(this[this.tableMAGAZZ.PERCXCOSTOColumn]));
-                }
-                set {
-                    this[this.tableMAGAZZ.PERCXCOSTOColumn] = value;
-                }
+            public void SetPEZZICONFNull() {
+                this[this.tableMAGAZZ.PEZZICONFColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5040,6 +4896,90 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPESONull() {
+                return this.IsNull(this.tableMAGAZZ.PESOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPESONull() {
+                this[this.tableMAGAZZ.PESOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsUNITAPESONull() {
+                return this.IsNull(this.tableMAGAZZ.UNITAPESOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetUNITAPESONull() {
+                this[this.tableMAGAZZ.UNITAPESOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsALTEZZANull() {
+                return this.IsNull(this.tableMAGAZZ.ALTEZZAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetALTEZZANull() {
+                this[this.tableMAGAZZ.ALTEZZAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsLARGHEZZANull() {
+                return this.IsNull(this.tableMAGAZZ.LARGHEZZAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetLARGHEZZANull() {
+                this[this.tableMAGAZZ.LARGHEZZAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsLUNGHEZZANull() {
+                return this.IsNull(this.tableMAGAZZ.LUNGHEZZAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetLUNGHEZZANull() {
+                this[this.tableMAGAZZ.LUNGHEZZAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsIDTABSETTNull() {
+                return this.IsNull(this.tableMAGAZZ.IDTABSETTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetIDTABSETTNull() {
+                this[this.tableMAGAZZ.IDTABSETTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsIDTABCLASSNull() {
+                return this.IsNull(this.tableMAGAZZ.IDTABCLASSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetIDTABCLASSNull() {
+                this[this.tableMAGAZZ.IDTABCLASSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIDTABSTATNull() {
                 return this.IsNull(this.tableMAGAZZ.IDTABSTATColumn);
             }
@@ -5048,6 +4988,18 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIDTABSTATNull() {
                 this[this.tableMAGAZZ.IDTABSTATColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsEVSCONTISNNull() {
+                return this.IsNull(this.tableMAGAZZ.EVSCONTISNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetEVSCONTISNNull() {
+                this[this.tableMAGAZZ.EVSCONTISNColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5192,6 +5144,18 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetUTENTENull() {
                 this[this.tableMAGAZZ.UTENTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSTATOINSNull() {
+                return this.IsNull(this.tableMAGAZZ.STATOINSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSTATOINSNull() {
+                this[this.tableMAGAZZ.STATOINSColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5604,6 +5568,18 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPASSONull() {
+                return this.IsNull(this.tableMAGAZZ.PASSOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPASSONull() {
+                this[this.tableMAGAZZ.PASSOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsPROPRIETANull() {
                 return this.IsNull(this.tableMAGAZZ.PROPRIETAColumn);
             }
@@ -5624,6 +5600,18 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNOTEMAGAZZNull() {
                 this[this.tableMAGAZZ.NOTEMAGAZZColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsSUPERFICIENull() {
+                return this.IsNull(this.tableMAGAZZ.SUPERFICIEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetSUPERFICIENull() {
+                this[this.tableMAGAZZ.SUPERFICIEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5736,6 +5724,18 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsPESOXMMNull() {
+                return this.IsNull(this.tableMAGAZZ.PESOXMMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetPESOXMMNull() {
+                this[this.tableMAGAZZ.PESOXMMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIDMAGAZZSFRIDONull() {
                 return this.IsNull(this.tableMAGAZZ.IDMAGAZZSFRIDOColumn);
             }
@@ -5820,6 +5820,18 @@ namespace CreaEtichette.Entities {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsCONF_SNNull() {
+                return this.IsNull(this.tableMAGAZZ.CONF_SNColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetCONF_SNNull() {
+                this[this.tableMAGAZZ.CONF_SNColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsIDCONFACQNull() {
                 return this.IsNull(this.tableMAGAZZ.IDCONFACQColumn);
             }
@@ -5840,18 +5852,6 @@ namespace CreaEtichette.Entities {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetIDCONFVENNull() {
                 this[this.tableMAGAZZ.IDCONFVENColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsIDCONFSTOCKNull() {
-                return this.IsNull(this.tableMAGAZZ.IDCONFSTOCKColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetIDCONFSTOCKNull() {
-                this[this.tableMAGAZZ.IDCONFSTOCKColumn] = global::System.Convert.DBNull;
             }
         }
         

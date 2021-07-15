@@ -32,7 +32,7 @@ namespace CreaEtichette.Data
                 if (useLike)
                 {
                     query += string.Format(CultureInfo.InvariantCulture, " AND {0} LIKE $P<{1}> ", fieldName, parameterName);
-                    ps.AddParam(parameterName, DbType.String, parameterValue + "%");
+                    ps.AddParam(parameterName, DbType.String, "%" + parameterValue + "%");
                 }
                 else
                 {
@@ -180,7 +180,7 @@ namespace CreaEtichette.Data
                 long lnNextVal = Convert.ToInt64(da.ExecuteScalar());
                 return lnNextVal;
             }
-        }       
+        }
 
     }
 }
